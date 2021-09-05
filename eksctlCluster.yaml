@@ -1,0 +1,35 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: akl-api-gw-prod-cluster
+  region: us-east-2
+
+
+vpc:
+  cidr: 10.16.0.0/16
+  autoAllocateIPv6: true
+  # disable public access to endpoint and only allow private access
+  clusterEndpoints:
+    publicAccess: true
+    privateAccess: true
+
+
+managedNodeGroups:
+  - name: akl-gw-ng-1
+    privateNetworking: true
+    desiredCapacity: 2
+    minSize: 2
+    maxSize: 5
+    volumeSize: 20
+    labels: { role: worker }
+    tags:
+      nodegroup-role: worker
+    iam:
+      withAddonPolicies:
+        autoScaler: true
+        certManager: true
+        cloudWatch: true
+        albIngress: true
+    ssh:
+      allow: true
+      publicKeyPath: /home/manubalasree/.ssh/akl-apigw.pem.pub
