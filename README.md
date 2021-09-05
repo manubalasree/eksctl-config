@@ -1,0 +1,1 @@
+# eksctl-config
