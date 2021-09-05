@@ -32,4 +32,4 @@ managedNodeGroups:
         albIngress: true
     ssh:
       allow: true
-      publicKeyPath: /home/manubalasree/.ssh/akl-apigw.pem.pub
+      publicKeyPath: ~/.ssh/akl-apigw.pem.pub
