@@ -28,11 +28,11 @@ managedNodeGroups:
       withAddonPolicies:
         certManager: true
         cloudWatch: true
+    ssh:
+      allow: true
+      publicKeyPath: ~/.ssh/akl-apigw.pem.pub
+
   
 cloudWatch:
   clusterLogging:
     enableTypes: ["*"]
-
-    ssh:
-      allow: true
-      publicKeyPath: ~/.ssh/akl-apigw.pem.pub
