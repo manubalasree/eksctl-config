@@ -29,10 +29,13 @@ managedNodeGroups:
         certManager: true
         cloudWatch: true
     ssh:
-      allow: true
-      publicKeyPath: ~/.ssh/akl-apigw.pem.pub
+    #allow ssh using public key this needs a bastion host since nodes are in private subnet
+      #allow: true
+      #publicKeyPath: ~/.ssh/akl-apigw.pem.pub
+      enableSsm: true
+       
 
-  
+
 cloudWatch:
   clusterLogging:
     enableTypes: ["*"]
