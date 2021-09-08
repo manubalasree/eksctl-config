@@ -26,10 +26,8 @@ managedNodeGroups:
       nodegroup-role: worker
     iam:
       withAddonPolicies:
-        autoScaler: true
         certManager: true
         cloudWatch: true
-        albIngress: true
     ssh:
       allow: true
       publicKeyPath: ~/.ssh/akl-apigw.pem.pub
