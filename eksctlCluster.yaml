@@ -35,7 +35,6 @@ managedNodeGroups:
       enableSsm: true
        
 
-
 cloudWatch:
   clusterLogging:
     enableTypes: ["*"]
