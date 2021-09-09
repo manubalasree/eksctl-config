@@ -19,7 +19,7 @@ managedNodeGroups:
     privateNetworking: true
     desiredCapacity: 2
     minSize: 2
-    maxSize: 5
+    maxSize: 10
     volumeSize: 20
     labels: { role: worker }
     tags:
