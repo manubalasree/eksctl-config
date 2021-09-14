@@ -106,5 +106,5 @@ kubectl --namespace=kube-system get pods -l "app.kubernetes.io/name=aws-cluster-
 
 ## Setup Load Balancer
 
-[see documentation](eksalb/aws-load-balancer-controller.md)
+[see documentation](eksalb/README.md)
 
